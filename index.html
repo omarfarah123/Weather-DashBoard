@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid p-3 bg-primary text-white text-center">
+        <h1>Weather Dashboard</h1>
+      </div>
+
+      
+          <section id="citySearch" class="col-4">
+            <label class="form-label" for="form1"><h3>Search for a city</h3></label>
+                  <input id="search-input" type="search" class="form-control" style="text-transform: capitalize;" required/>
+                </div>
+                <button id="search-button" type="button" class="col-12 btn btn-primary">
+                  <i class="fas fa-search">Search</i>
+                </button>
+                <hr style="width:50%", size="10", color=black> 
+                <section class="col-12" id="cityHistory">
+                </section>
+          </section>
+          
+          <section class="col-8">
+            <section class="col-12" id="cityData" style="border: 1px solid black;">
+              <h2 id="cityName"></h2>
+              <p id="temp"></p>
+              <p id="wind"></p>
+              <p id="humidity"></p>
+              <p id="UVindex"></p>
+            </section>
+            <section class="col-3" id="day1">
+              <p class="date"></p>
+              <img class="icon" src="">
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            </section>
+            <section class="col-3" id="day2">
+              <p class="date"></p>
+              <img class="icon" src="">
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            </section>
+            <section class="col-3" id="day3">
+              <p class="date"></p>
+              <img class="icon" src="">
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            </section>
+            <section class="col-3" id="day4">
+              <p class="date"></p>
+              <img class="icon" src="">
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            </section>
+            <section class="col-3" id="day5">
+              <p class="date"></p>
+              <img class="icon" src="">
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            </section>
+          </section>
+        
+
+
+
+
+      
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    <script src="assets/script.js"></script> 
+</body>
+</html>
