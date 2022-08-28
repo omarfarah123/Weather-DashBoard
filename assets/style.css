@@ -3,17 +3,27 @@ section {
 }
 
 #day1{
-    background-color: lightblue;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    margin: 5px;
 }
 #day2{
-    background-color: lightblue;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    margin: 5px;
 }
 #day3{
-    background-color: lightblue;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    margin: 5px;
 }
 #day4{
-    background-color: aliceblue;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    margin: 5px;
 }
 #day5{
-    background-color: lightblue;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    margin: 5px;
 }
