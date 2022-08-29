@@ -15,7 +15,7 @@
 
       
           <section id="citySearch" class="col-4">
-            <label class="form-label" for="form1"><h3>Search for a city</h3></label>
+            <label class="form-label" for="form1"><h3>Search for a city or country</h3></label>
                   <input id="search-input" type="search" class="form-control" style="text-transform: capitalize;" required/>
                 </div>
                 <button id="search-button" type="button" class="col-12 btn btn-primary">
@@ -25,16 +25,16 @@
                 <section class="col-12" id="cityHistory">
                 </section>
           </section>
-          
+      
           <section class="col-8">
             <section class="col-12" id="cityData" style="border: 1px solid black;">
               <h2 id="cityName"></h2>
               <p id="temp"></p>
               <p id="wind"></p>
               <p id="humidity"></p>
-              <p id="UVindex">UV: <span id="uv"></span></p>
+              <p id="UVindex"><span id="uv"></span><span id="uvNum"></span></p>
             </section>
-            <h2>5 Day Forecast:</h2>
+            <h2 id="fiveDay">5 Day Forecast:</h2>
             <section class="col-3" id="day1">
               <p class="date"></p>
               <img class="icon" src="">
@@ -71,6 +71,7 @@
               <p class="humidity"></p>
             </section>
           </section>
+        
         
 
 

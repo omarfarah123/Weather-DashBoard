@@ -9,10 +9,11 @@ var wind = document.querySelector("#wind");
 var humidity = document.querySelector("#humidity");
 var uvIndex = document.querySelector("#UVindex");
 var uv = document.querySelector("#uv")
+var uvNum = document.querySelector("#uvNum")
 var lat;
 var lng;
 
-var cities = []
+var cities = [];
 
 
 cityInput.addEventListener("input", function(event) {
@@ -30,15 +31,16 @@ function uvIndexRetriever(lat, lng){
         return response.json()
     })
     .then(function (data) {
-        uv.innerHTML = `${data.value}`
+        uv.innerHTML = "UV: "
+        uvNum.innerHTML = `${data.value}`
         if(data.value <= 2.99){
-            uv.style.backgroundColor = "green"
+            uvNum.style.backgroundColor = "green"
         } else if(data.value >= 3 && uvIndex <= 5.99){
-            uv.style.backgroundColor  = "yellow"
+            uvNum.style.backgroundColor  = "yellow"
         } else if(data.value >= 6 && data.value <= 7.99){
-            uv.style.backgroundColor = "orange"
+            uvNum.style.backgroundColor = "orange"
         } else {
-            uv.style.backgroundColor = "red"
+            uvNum.style.backgroundColor = "red"
         }
     })
 
@@ -138,6 +140,9 @@ function historyButton(){
     button.classList.add("col-12", "btn", "btn-secondary")
     for(let i = 0; i < cities.length; i++){
         button.innerHTML = cities[i];
+        button.addEventListener("click", function(){
+            getWeather(button.innerHTML)
+        })
         cityHistory.append(button)
     }
 }
@@ -145,9 +150,22 @@ function historyButton(){
 //When the users searches for the city or country the data gets passed to e the getWeather() function
 searchButton.addEventListener("click", function(){
     getWeather(cityInput.value)
+    document.getElementById("cityData").style.display = "block";
+     document.getElementById("day1").style.display = "block";
+     document.getElementById("day2").style.display = "block";
+     document.getElementById("day3").style.display = "block";
+     document.getElementById("day4").style.display = "block";
+     document.getElementById("day5").style.display = "block";
+     document.getElementById("fiveDay").style.display = "block";
     }
 )
 
-
-
-
+window.onload = function() {
+     document.getElementById("cityData").style.display = "none";
+     document.getElementById("day1").style.display = "none";
+     document.getElementById("day2").style.display = "none";
+     document.getElementById("day3").style.display = "none";
+     document.getElementById("day4").style.display = "none";
+     document.getElementById("day5").style.display = "none";
+     document.getElementById("fiveDay").style.display = "none";
+  };
